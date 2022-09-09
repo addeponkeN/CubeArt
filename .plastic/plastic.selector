@@ -1,0 +1,4 @@
+repository "AdvancedCube@addeponkeN@cloud"
+  path "/"
+    br "/main"
+    co "/main"
