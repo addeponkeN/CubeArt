@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Script.MaterialSwapper
 {
-    public class RandomInvokedMaterialSwapper : MonoBehaviour, IMaterialSwapper
+    public class RandomMaterialInvokedSwapper : MonoBehaviour, IMaterialSwapper
     {
         public Renderer Renderer { get; set; }
         public MaterialCollection MaterialCollection { get; set; }

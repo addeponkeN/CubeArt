@@ -44,7 +44,7 @@
      <Compile Include="Assets\Script\Util\Timer.cs" />
      <Compile Include="Assets\Script\MaterialSwapper\RandomMaterialCoroutineSwapper.cs" />
      <Compile Include="Assets\Script\CubeArt.cs" />
-     <Compile Include="Assets\Script\MaterialSwapper\RandomInvokedMaterialSwapper.cs" />
+     <Compile Include="Assets\Script\MaterialSwapper\RandomMaterialInvokedSwapper.cs" />
      <Compile Include="Assets\Script\Util\IndexLooper.cs" />
      <Compile Include="Assets\Script\MaterialSwapper\IMaterialSwapper.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />

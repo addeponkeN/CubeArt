@@ -38,7 +38,7 @@ public class CubeArt : MonoBehaviour
                 SetMaterialSwapper(new RandomMaterialSwapper(GameManager.Get.MaterialCollection, _ren));
                 break;
             case 1:
-                var matSwapperInvoked = gameObject.AddComponent<RandomInvokedMaterialSwapper>();
+                var matSwapperInvoked = gameObject.AddComponent<RandomMaterialInvokedSwapper>();
                 matSwapperInvoked.Renderer = _ren;
                 matSwapperInvoked.MaterialCollection = GameManager.Get.MaterialCollection;
                 SetMaterialSwapper(matSwapperInvoked);
