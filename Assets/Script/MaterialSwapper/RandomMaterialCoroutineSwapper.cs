@@ -16,20 +16,18 @@ namespace Script.MaterialSwapper
             StartCoroutine(SetRandomMaterial());
         }
 
+        public void SetMaterial()
+        {
+            Renderer.material = MaterialCollection.GetRandomMaterial();
+        }
+
         IEnumerator SetRandomMaterial()
         {
             while(_alive)
             {
-                yield return new WaitForSeconds(1);
-                Renderer.material = GetRandomMaterial();
+                yield return new WaitForSeconds(CubeManager.MaterialSwapInterval);
+                SetMaterial();
             }
-        }
-
-        Material GetRandomMaterial()
-        {
-            var matNames = MaterialCollection.GetMaterialNames();
-            var matName = matNames[Random.Range(0, matNames.Count - 1)];
-            return MaterialCollection.GetMaterial(matName);
         }
 
         public void Update() { }

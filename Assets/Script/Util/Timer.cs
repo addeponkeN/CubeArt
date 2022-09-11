@@ -2,8 +2,9 @@ namespace Script.Util
 {
     public struct Timer
     {
-        public float Interval;
         float _timer;
+        
+        public float Interval;
         
         public Timer(float interval) : this()
         {
@@ -12,8 +13,7 @@ namespace Script.Util
 
         public bool UpdateTick(float delta)
         {
-            _timer += delta;
-            if(_timer >= Interval)
+            if((_timer += delta) >= Interval)
             {
                 _timer -= Interval;
                 return true;
@@ -22,7 +22,7 @@ namespace Script.Util
             return false;
         }
 
-        public static implicit operator Timer(float interval) => new Timer() {Interval = interval};
+        public static implicit operator Timer(float interval) => new(interval);
 
     }
 }

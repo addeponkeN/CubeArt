@@ -8,7 +8,7 @@ namespace Script.MaterialSwapper
         public Renderer Renderer { get; set; }
         public MaterialCollection MaterialCollection { get; set; }
 
-        public Timer SwapInterval = 0.5f;
+        public Timer SwapInterval = CubeManager.MaterialSwapInterval;
 
         public RandomMaterialSwapper(MaterialCollection materialCollection, Renderer ren)
         {
@@ -20,23 +20,16 @@ namespace Script.MaterialSwapper
         {
             if(SwapInterval.UpdateTick(Time.deltaTime))
             {
-                SetRandomMaterial();
+                SetMaterial();
             }
         }
 
+        public void SetMaterial()
+        {
+            Renderer.material = MaterialCollection.GetRandomMaterial();
+        }
+
         public void Kill() { }
-
-        public void SetRandomMaterial()
-        {
-            Renderer.material = GetRandomMaterial();
-        }
-
-        Material GetRandomMaterial()
-        {
-            var matNames = MaterialCollection.GetMaterialNames();
-            var name = matNames[Random.Range(0, matNames.Count - 1)];
-            return MaterialCollection.GetMaterial(name);
-        }
         
     }
 }

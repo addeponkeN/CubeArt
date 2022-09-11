@@ -9,27 +9,18 @@ namespace Script.MaterialSwapper
 
         void Start()
         {
-            InvokeRepeating("SetRandomMaterial", 0.5f, 1f);
+            InvokeRepeating("SetMaterial", 0f, CubeManager.MaterialSwapInterval);
         }
         
         public void Update() { }
-        
+        public void SetMaterial()
+        {
+            Renderer.material = MaterialCollection.GetRandomMaterial();
+        }
+
         public void Kill()
         {
             Destroy(this);
         }
-
-        public void SetRandomMaterial()
-        {
-            Renderer.material = GetRandomMaterial();
-        }
-
-        Material GetRandomMaterial()
-        {
-            var matNames = MaterialCollection.GetMaterialNames();
-            var matName = matNames[Random.Range(0, matNames.Count - 1)];
-            return MaterialCollection.GetMaterial(matName);
-        }
-        
     }
 }
