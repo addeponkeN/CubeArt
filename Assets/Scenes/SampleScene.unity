@@ -215,7 +215,7 @@ Transform:
   m_GameObject: {fileID: 103702221}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -4, z: 0}
-  m_LocalScale: {x: 6.8, y: 1, z: 4.82}
+  m_LocalScale: {x: 8.42, y: 1, z: 5.63}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 634039510}
@@ -231,7 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 634039510}
   m_Layer: 0
-  m_Name: Playfield
+  m_Name: Cubefield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,7 +253,7 @@ Transform:
   - {fileID: 963194228}
   - {fileID: 1157933311}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -400,7 +400,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 74
+  field of view: 75
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -426,7 +426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 25, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -530,34 +530,3 @@ MonoBehaviour:
     - {fileID: 2100000, guid: 8c43362dbc10aa94fa03cb4d1b7e8d0e, type: 2}
     - {fileID: 2100000, guid: 7c67b8654e021ba47a7a3b39f37b6d40, type: 2}
   Plane: {fileID: 103702221}
---- !u!1 &1997432955
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1997432956}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1997432956
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997432955}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.2761607, y: 39.5458, z: 6.5998774}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
