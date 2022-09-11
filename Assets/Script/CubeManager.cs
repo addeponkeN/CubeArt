@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Script.Util;
+using Util;
 using UnityEngine;
 
 public class CubeManager : MonoBehaviour

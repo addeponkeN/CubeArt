@@ -1,4 +1,4 @@
-namespace Script.Util
+namespace Util
 {
     public static class IndexHelper
     {

@@ -1,7 +1,7 @@
-using Script.Util;
+using Util;
 using UnityEngine;
 
-namespace Script.MaterialSwapper
+namespace MaterialSwapper
 {
     public class RandomMaterialSwapper : IMaterialSwapper
     {

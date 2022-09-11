@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Script.MaterialSwapper
+namespace MaterialSwapper
 {
     public interface IMaterialSwapper
     {

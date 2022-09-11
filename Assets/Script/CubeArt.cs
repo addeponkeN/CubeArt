@@ -1,6 +1,6 @@
 using System;
-using Script.MaterialSwapper;
-using Script.Util;
+using MaterialSwapper;
+using Util;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
