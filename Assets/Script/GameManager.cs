@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public MaterialCollection MaterialCollection;
 
-    void Awake()
+    private void Awake()
     {
         Get = this;
     }

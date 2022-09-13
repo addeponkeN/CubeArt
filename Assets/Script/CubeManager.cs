@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class CubeManager : MonoBehaviour
 {
-    public static float MaterialSwapInterval = 0.75f;
+    private const int FieldWidth = 16;
+    private const int FieldHeight = 9;
+    private const float FieldSpacing = 2f;
     
-    const int FieldWidth = 16;
-    const int FieldHeight = 9;
-    const float FieldSpacing = 2f;
+    public static float MaterialSwapInterval = 0.75f;
 
     public GameObject Prefab_Cube;
     public Timer CubeSpawnTimer = 0.1f;
 
-    List<CubeBytePoint> _cubePositionPool;
-    
-    void Start()
+    private List<CubeBytePoint> _cubePositionPool;
+
+    private void Start()
     {
         _cubePositionPool = new List<CubeBytePoint>();
 
@@ -28,7 +28,7 @@ public class CubeManager : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         if(CubeSpawnTimer.UpdateTick(Time.deltaTime) && _cubePositionPool.Count > 0)
         {
@@ -36,12 +36,12 @@ public class CubeManager : MonoBehaviour
         }
     }
 
-    CubeBytePoint PopRandomCubeSpawnPoint()
+    private CubeBytePoint PopRandomCubeSpawnPoint()
     {
         return _cubePositionPool.PopRandom();
     }
 
-    void SpawnCube()
+    private void SpawnCube()
     {
         var cubePoint = PopRandomCubeSpawnPoint();
         var cube = Instantiate(Prefab_Cube, transform);
@@ -51,7 +51,7 @@ public class CubeManager : MonoBehaviour
         scr.KilledEvent += OnKilledEvent;
     }
 
-    void OnKilledEvent(CubeArt cube)
+    private void OnKilledEvent(CubeArt cube)
     {
         _cubePositionPool.Add(cube.CubePoint);
     }

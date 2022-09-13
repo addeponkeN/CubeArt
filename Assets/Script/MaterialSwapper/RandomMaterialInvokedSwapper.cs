@@ -7,7 +7,7 @@ namespace MaterialSwapper
         public Renderer Renderer { get; set; }
         public MaterialCollection MaterialCollection { get; set; }
 
-        void Start()
+        private void Start()
         {
             InvokeRepeating("SetMaterial", 0f, CubeManager.MaterialSwapInterval);
         }

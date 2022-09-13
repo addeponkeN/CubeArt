@@ -6,14 +6,14 @@ using Random = UnityEngine.Random;
 
 public class CubeArt : MonoBehaviour
 {
-    Renderer _ren;
-    IMaterialSwapper _matSwapper;
-    Vector3 _timeOffset;
+    private Renderer _ren;
+    private IMaterialSwapper _matSwapper;
+    private Vector3 _timeOffset;
 
     public CubeBytePoint CubePoint;
     public event Action<CubeArt> KilledEvent;
 
-    void Start()
+    private void Start()
     {
         _ren = GetComponent<Renderer>();
         BadSelectRandomMaterialSwapper();
@@ -23,13 +23,13 @@ public class CubeArt : MonoBehaviour
         _timeOffset = new Vector3(Random.Range(0, pi2), Random.Range(0, pi2), Random.Range(0, pi2));
     }
 
-    void SetMaterialSwapper(IMaterialSwapper swap)
+    private void SetMaterialSwapper(IMaterialSwapper swap)
     {
         _matSwapper?.Kill();
         _matSwapper = swap;
     }
 
-    void BadSelectRandomMaterialSwapper()
+    private void BadSelectRandomMaterialSwapper()
     {
         int i = Random.Range(0, 2);
         switch(i)
@@ -52,7 +52,7 @@ public class CubeArt : MonoBehaviour
         }
     }
 
-    void OnMouseOver()
+    private void OnMouseOver()
     {
         if(Input.GetMouseButtonDown(0))
         {
@@ -60,13 +60,13 @@ public class CubeArt : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         _matSwapper.Update();
         UpdateJuice();
     }
 
-    void UpdateJuice()
+    private void UpdateJuice()
     {
         var tf = transform;
 
@@ -89,7 +89,7 @@ public class CubeArt : MonoBehaviour
         tf.localScale = scale;
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
         KilledEvent?.Invoke(this);
     }

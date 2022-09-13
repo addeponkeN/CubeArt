@@ -41,19 +41,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\Util\CubeBytePoint.cs" />
      <Compile Include="Assets\Script\Util\Timer.cs" />
      <Compile Include="Assets\Script\MaterialSwapper\RandomMaterialCoroutineSwapper.cs" />
      <Compile Include="Assets\Script\CubeArt.cs" />
      <Compile Include="Assets\Script\MaterialSwapper\RandomMaterialInvokedSwapper.cs" />
-     <Compile Include="Assets\Script\Util\IndexLooper.cs" />
+     <Compile Include="Assets\Script\CubeManager.cs" />
+     <Compile Include="Assets\Script\Util\ExtensionMethods.cs" />
      <Compile Include="Assets\Script\MaterialSwapper\IMaterialSwapper.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\MaterialSwapper\RandomMaterialSwapper.cs" />
      <Compile Include="Assets\Script\MaterialCollection.cs" />
-     <Compile Include="Assets\Script\CubeManager.cs" />
-     <Compile Include="Assets\Script\Util\ExtensionMethods.cs" />
-     <Compile Include="Assets\Script\Util\CubeBytePoint.cs" />
-     <Compile Include="Assets\Script\Util\IndexHelper.cs" />
+     <Compile Include="Assets\Script\MaterialScalableCollection.cs" />
      <Reference Include="UnityEngine">
      <HintPath>F:\unity\UnityEditor\2021.3.8f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

@@ -2,7 +2,7 @@ namespace Util
 {
     public struct Timer
     {
-        float _timer;
+        private float _timer;
         
         public float Interval;
         

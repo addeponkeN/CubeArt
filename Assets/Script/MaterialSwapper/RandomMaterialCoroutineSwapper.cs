@@ -8,9 +8,9 @@ namespace MaterialSwapper
         public Renderer Renderer { get; set; }
         public MaterialCollection MaterialCollection { get; set; }
 
-        bool _alive;
+        private bool _alive;
 
-        void Start()
+        private void Start()
         {
             _alive = true;
             StartCoroutine(SetRandomMaterial());
@@ -21,7 +21,7 @@ namespace MaterialSwapper
             Renderer.material = MaterialCollection.GetRandomMaterial();
         }
 
-        IEnumerator SetRandomMaterial()
+        private IEnumerator SetRandomMaterial()
         {
             while(_alive)
             {
@@ -35,6 +35,7 @@ namespace MaterialSwapper
         public void Kill()
         {
             _alive = false;
+            Destroy(this);
         }
     }
 }
